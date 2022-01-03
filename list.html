@@ -1,0 +1,421 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ghz</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/papaparse@4.5.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/britecharts@2/dist/bundled/britecharts.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/britecharts/dist/css/britecharts.min.css" type="text/css" /></head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+
+  </head>
+
+	<body>
+
+		<section class="section">
+
+		<div class="container">
+			
+			
+				<h2 class="subtitle">Mon Jan  3 2022 @ 21:23:28</h2>
+			
+		</div>
+		<br />
+
+		<div class="container">
+      <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#summary">
+              <span class="icon is-small">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+              </span>
+              <span>Summary</span>
+            </a>
+          </li>
+          <li>
+            <a href="#histogram">
+              <span class="icon is-small">
+                <i class="fas fa-chart-bar" aria-hidden="true"></i>
+              </span>
+              <span>Histogram</span>
+            </a>
+          </li>
+          <li>
+            <a href="#latency">
+              <span class="icon is-small">
+                <i class="far fa-clock" aria-hidden="true"></i>
+              </span>
+              <span>Latency Distribution</span>
+            </a>
+          </li>
+          <li>
+            <a href="#status">
+              <span class="icon is-small">
+                <i class="far fa-check-square" aria-hidden="true"></i>
+              </span>
+              <span>Status Distribution</span>
+            </a>
+					</li>
+					
+          <li>
+            <a href="#data">
+              <span class="icon is-small">
+                <i class="far fa-file-alt" aria-hidden="true"></i>
+              </span>
+              <span>Data</span>
+            </a>
+		  </li>
+		  <li>
+            <a href="#options">
+              <span class="icon is-small">
+                <i class="fas fa-cog" aria-hidden="true"></i>
+              </span>
+              <span>Options</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+		</div>
+
+		
+
+	  <div class="container">
+			<div class="columns">
+				<div class="column is-narrow">
+					<div class="content">
+						<a name="summary">
+							<h3>Summary</h3>
+						</a>
+						<table class="table">
+							<tbody>
+								<tr>
+									<th>Count</th>
+									<td>200</td>
+								</tr>
+								<tr>
+									<th>Total</th>
+									<td>106.87 ms</td>
+								</tr>
+								<tr>
+									<th>Slowest</th>
+								<td>30.71 ms</td>
+								</tr>
+								<tr>
+									<th>Fastest</th>
+									<td>9.50 ms</td>
+								</tr>
+								<tr>
+									<th>Average</th>
+									<td>22.68 ms</td>
+								</tr>
+								<tr>
+									<th>Requests / sec</th>
+									<td>1871.39</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="column">
+					<div class="content">
+					</div>
+				</div>
+			</div>
+	  </div>
+
+	  <br />
+		<div class="container">
+			<div class="content">
+				<a name="histogram">
+					<h3>Histogram</h3>
+				</a>
+				<p>
+					<div class="js-bar-container"></div>
+				</p>
+			</div>
+	  </div>
+
+	  <br />
+		<div class="container">
+			<div class="content">
+				<a name="latency">
+					<h3>Latency distribution</h3>
+				</a>
+				<table class="table is-fullwidth">
+					<thead>
+						<tr>
+							
+								<th>10 %</th>
+							
+								<th>25 %</th>
+							
+								<th>50 %</th>
+							
+								<th>75 %</th>
+							
+								<th>90 %</th>
+							
+								<th>95 %</th>
+							
+								<th>99 %</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							
+								<td>16.68 ms</td>
+							
+								<td>19.51 ms</td>
+							
+								<td>22.52 ms</td>
+							
+								<td>26.21 ms</td>
+							
+								<td>28.21 ms</td>
+							
+								<td>29.21 ms</td>
+							
+								<td>30.21 ms</td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<br />
+		<div class="container">
+			<div class="columns">
+				<div class="column is-narrow">
+					<div class="content">
+						<a name="status">
+							<h3>Status distribution</h3>
+						</a>
+						<table class="table is-hoverable">
+							<thead>
+								<tr>
+									<th>Status</th>
+									<th>Count</th>
+									<th>% of Total</th>
+								</tr>
+							</thead>
+							<tbody>
+							  
+									<tr>
+									  <td>OK</td>
+										<td>200</td>
+										<td>100.00 %</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<br />
+      <div class="container">
+        <div class="columns">
+          <div class="column is-narrow">
+            <div class="content">
+              <a name="data">
+                <h3>Data</h3>
+              </a>
+
+              <a class="button" id="dlJSON">JSON</a>
+              <a class="button" id="dlCSV">CSV</a>
+            </div>
+          </div>
+        </div>
+			</div>
+
+			<br />
+
+			<div class="container">
+				<div class="content">
+					<a name="options">
+						<h3>Options</h3>
+					</a>
+					<article class="message">
+						<div class="message-body">
+							<pre style="background-color: transparent;">{
+  "call": "glovory.Address.List",
+  "host": "0.0.0.0:5051",
+  "proto": "./protos/auth.proto",
+  "import-paths": [
+    "protos",
+    "."
+  ],
+  "insecure": true,
+  "load-schedule": "const",
+  "load-start": 0,
+  "load-end": 0,
+  "load-step": 0,
+  "load-step-duration": 0,
+  "load-max-duration": 0,
+  "concurrency": 50,
+  "concurrency-schedule": "const",
+  "concurrency-start": 0,
+  "concurrency-end": 0,
+  "concurrency-step": 1,
+  "concurrency-step-duration": 0,
+  "concurrency-max-duration": 0,
+  "total": 200,
+  "connections": 1,
+  "timeout": 20000000000,
+  "dial-timeout": 10000000000,
+  "data": {
+    "user_id": "02704cb9-b7fb-4d47-8457-0510cdbde619"
+  },
+  "binary": false,
+  "metadata": {
+    "authorization": "bearer GlovoryBearerAuth"
+  },
+  "CPUs": 4
+}</pre>
+						</div>
+					</article>
+				</div>
+			</div>
+
+			<div class="container">
+        <hr />
+        <div class="content has-text-centered">
+          <p>
+            Generated by <strong>ghz</strong>
+          </p>
+          <a href="https://github.com/bojand/ghz"><i class="icon is-medium fab fa-github"></i></a>
+        </div>
+      </div>
+
+		</section>
+
+  </body>
+
+  <script>
+
+	const count = 200;
+
+	const rawData = [{"timestamp":"2022-01-03T21:23:27.933412+07:00","latency":25711000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":26210200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":26210200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":26210200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":26646200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":26646200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":27709700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":28210500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":26210200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":26210200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":28210500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":28710800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":28710800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":29710700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":30209500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":30209500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":30209500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9339112+07:00","latency":26210200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9344131+07:00","latency":30711400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9354136+07:00","latency":22711600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9364135+07:00","latency":28212400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9369121+07:00","latency":28711000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9369121+07:00","latency":25210300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9374118+07:00","latency":25209900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25710600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25710600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25210500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25210500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25710600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25210500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25210500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":28210500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29210800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29711400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29210800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29210800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29711400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29210800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":27710600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29210800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29210800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":27710600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":27710600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25710600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":27103600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":29711400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":26210700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":26210700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":26210700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9379125+07:00","latency":25710600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9489121+07:00","latency":14499000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9489121+07:00","latency":13939900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9489121+07:00","latency":14499000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9489121+07:00","latency":14499000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9489121+07:00","latency":14499000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9489121+07:00","latency":14499000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9489121+07:00","latency":15000900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9489121+07:00","latency":15000900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9629434+07:00","latency":26529900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":27998600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":26998700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":22999100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":26000400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":23999900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":23999900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":23498800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":23498800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":23498800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":22999100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9634122+07:00","latency":22599400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":28015100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":24513300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":28015100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":28015100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27514700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27514700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27514700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27514700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27514700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27514700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27013500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27013500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27013500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":27013500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":26507200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":26012800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":25513900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":25513900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":25014100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":24513300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":22515100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":24014400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":24014400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":24014400,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":22515100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":22515100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":22515100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":22515100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":22013300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":22013300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9689273+07:00","latency":20015200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":9501100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":9501100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":23500800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":23662100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":23662100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":23500800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":23500800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":23500800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":23500800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9729133+07:00","latency":9501100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9844226+07:00","latency":20509500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9844226+07:00","latency":20509500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9844226+07:00","latency":20011100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9844226+07:00","latency":19509900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9844226+07:00","latency":19189700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9844226+07:00","latency":19010900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9844226+07:00","latency":18356700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9849131+07:00","latency":21000000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9854113+07:00","latency":21498200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":22023300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21768000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21768000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21538300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21768000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21538300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21538300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21538300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21037800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21538300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21538300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21538300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21538300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21037800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21037800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21037800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21037800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":21037800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":18537500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":20038200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":20038200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":20038200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":19538200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":19538200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":19038000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":18537500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":18537500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9909506+07:00","latency":18037300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22507900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22008100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22507900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22507900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22008100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22008100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22507900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22507900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22507900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22008100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22008100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22008100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:27.9954212+07:00","latency":22008100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":22998600,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":24489200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":23500500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":23998700,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":22498200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":21997800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":21997800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":17961200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":22498200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0089118+07:00","latency":21997800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0099355+07:00","latency":14514300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0099355+07:00","latency":18021000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0099355+07:00","latency":18021000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0099355+07:00","latency":18021000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0099355+07:00","latency":18021000,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0099355+07:00","latency":16023900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0099355+07:00","latency":18984900,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0099355+07:00","latency":16523300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":15431200,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":15176500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18173800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":15176500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":17675100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":14667100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":16676100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":16676100,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18173800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18173800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":17175300,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18173800,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"},{"timestamp":"2022-01-03T21:23:28.0100883+07:00","latency":18674500,"error":"","status":"OK"}];
+
+	const data = [
+		
+			{ name: '9.50 ms', value: 3 },
+		
+			{ name: '11.62 ms', value: 0 },
+		
+			{ name: '13.74 ms', value: 0 },
+		
+			{ name: '15.86 ms', value: 13 },
+		
+			{ name: '17.99 ms', value: 7 },
+		
+			{ name: '20.11 ms', value: 34 },
+		
+			{ name: '22.23 ms', value: 34 },
+		
+			{ name: '24.35 ms', value: 35 },
+		
+			{ name: '26.47 ms', value: 29 },
+		
+			{ name: '28.59 ms', value: 28 },
+		
+			{ name: '30.71 ms', value: 17 },
+		
+	];
+
+	function createHorizontalBarChart() {
+		let barChart = britecharts.bar(),
+			tooltip = britecharts.miniTooltip(),
+			barContainer = d3.select('.js-bar-container'),
+			containerWidth = barContainer.node() ? barContainer.node().getBoundingClientRect().width : false,
+			tooltipContainer,
+			dataset;
+
+		tooltip.numberFormat('')
+		tooltip.valueFormatter(function(v) {
+			var percent = v / count * 100;
+			return v + ' ' + '(' + Number.parseFloat(percent).toFixed(1) + ' %)';
+		})
+
+		if (containerWidth) {
+			dataset = data;
+			barChart
+				.isHorizontal(true)
+				.isAnimated(true)
+				.margin({
+					left: 100,
+					right: 20,
+					top: 20,
+					bottom: 20
+				})
+				.colorSchema(britecharts.colors.colorSchemas.teal)
+				.width(containerWidth)
+				.yAxisPaddingBetweenChart(20)
+				.height(400)
+				// .hasPercentage(true)
+				.enableLabels(true)
+				.labelsNumberFormat('')
+				.percentageAxisToMaxRatio(1.3)
+				.on('customMouseOver', tooltip.show)
+				.on('customMouseMove', tooltip.update)
+				.on('customMouseOut', tooltip.hide);
+
+			barChart.orderingFunction(function(a, b) {
+				var nA = a.name.replace(/ms/gi, '');
+				var nB = b.name.replace(/ms/gi, '');
+
+				var vA = Number.parseFloat(nA);
+				var vB = Number.parseFloat(nB);
+
+				return vB - vA;
+			})
+
+			barContainer.datum(dataset).call(barChart);
+
+			tooltipContainer = d3.select('.js-bar-container .bar-chart .metadata-group');
+			tooltipContainer.datum([]).call(tooltip);
+		}
+	}
+
+	function setJSONDownloadLink () {
+		var filename = "data.json";
+		var btn = document.getElementById('dlJSON');
+		var jsonData = JSON.stringify(rawData)
+		var blob = new Blob([jsonData], { type: 'text/json;charset=utf-8;' });
+		var url = URL.createObjectURL(blob);
+		btn.setAttribute("href", url);
+		btn.setAttribute("download", filename);
+	}
+
+	function setCSVDownloadLink () {
+		var filename = "data.csv";
+		var btn = document.getElementById('dlCSV');
+		var csv = Papa.unparse(rawData)
+		var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+		var url = URL.createObjectURL(blob);
+		btn.setAttribute("href", url);
+		btn.setAttribute("download", filename);
+	}
+
+	createHorizontalBarChart();
+
+	setJSONDownloadLink();
+
+	setCSVDownloadLink();
+
+	</script>
+
+	<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+</html>
